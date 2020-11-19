@@ -1,7 +1,26 @@
-<h1> All Flats </h1>
 
-<ul>
-  <% @flats.each do | flat | %>
-    <li><%= flat.name %></li>
+<div class="container">
+      <h1> All ours Flats (<%= @flats.count %>) </h1>
+      <div class="cards">
+        <% @flats.each do | flat | %>
+  <div class="card-trip">
+    <img src="https://source.unsplash.com/random?flat,indoor" />
+    <div class="card-trip-infos">
+      <div>
+        <h2><%=flat.name%></h2>
+        <p><%= flat.address%></p>
+      </div>
+      <h2 class="card-trip-pricing">£<%= flat.price_per_night%></h2>
+      <p><%= flat.price_per_night%></p>
+    </div>
+  </div>
   <% end %>
-</ul>
+  </div>
+</div>
+
+
+
+
+
+
+
